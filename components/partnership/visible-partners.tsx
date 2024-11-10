@@ -56,6 +56,7 @@ const VisiblePartners = () => {
           <a
             href="mailto:partnerships@offersgenie.net"
             className="text-blue-500 ml-2"
+            rel="noreferrer"
           >
             partnerships@offersgenie.net
           </a>
