@@ -37,7 +37,7 @@ export const footerSocials = [
 ];
 
 export const envVars = {
-  baseUrl: process.env.BASE_URL,
+  baseUrl: process.env.NEXT_PUBLIC_BASE_URL,
 };
 
 export const NavMenulinks = [
