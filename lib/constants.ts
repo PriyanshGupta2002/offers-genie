@@ -47,7 +47,6 @@ export const NavMenulinks = [
   { name: "Blog", url: "/blog" },
   { name: "Partnership", url: "/partnership" },
 ];
-
 export const partnershipData = [
   {
     label: "No Upfront Costs",
