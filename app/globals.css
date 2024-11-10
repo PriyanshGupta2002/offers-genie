@@ -20,6 +20,11 @@
   .text-balance {
     text-wrap: balance;
   }
+
+}
+
+.shadow-custom {
+  box-shadow: 0 2px 8px #1B8DFF47,0 -1px 8px #1B8DFF47;
 }
 
 @layer base {

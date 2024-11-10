@@ -24,7 +24,7 @@ const MarkdownViewer = ({ url }: { url: string }) => {
   return (
     <div
       data-color-mode="light"
-      className="prose  prose-img:w-[1000px] max-w-5xl m-auto"
+      className="prose  prose-img:w-[1000px] max-w-5xl m-auto p-3"
     >
       <MarkdownPreview source={markdown} />
     </div>

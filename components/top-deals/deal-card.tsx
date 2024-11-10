@@ -28,7 +28,7 @@ const DealCard = () => {
         </div>
         <div className="space-y-2 p-3 flex flex-col gap-1">
           <span>Big Discounts</span>
-          <span className="text-[#343434] font-semibold text-2xl">
+          <span className="text-[#343434] font-semibold text-xl">
             Upto 80% off
           </span>
           <Button variant={"primary"}>+8% Cashback</Button>

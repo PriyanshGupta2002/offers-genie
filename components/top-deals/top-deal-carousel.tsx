@@ -15,13 +15,13 @@ const TopDealCarousel = () => {
       className="w-full"
     >
       <CarouselContent>
-        <CarouselItem className=" basis-[70%] md:basis-1/3">
+        <CarouselItem className="basis-[60%] sm:basis-[50%]  md:basis-[40%] lg:basis-[30%]">
           <DealCard />
         </CarouselItem>
-        <CarouselItem className="basis-[70%]  md:basis-1/3">
+        <CarouselItem className="basis-[60%] sm:basis-[50%]  md:basis-[40%] lg:basis-[30%]">
           <DealCard />
         </CarouselItem>
-        <CarouselItem className="basis-[70%] md:basis-1/3">
+        <CarouselItem className="basis-[60%] sm:basis-[50%] md:basis-[40%] lg:basis-[30%]">
           <DealCard />
         </CarouselItem>
       </CarouselContent>

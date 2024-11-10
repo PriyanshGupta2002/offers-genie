@@ -8,6 +8,7 @@ import {
 } from "./ui/dropdown-menu";
 import { AlignJustify } from "lucide-react";
 import Link from "next/link";
+import { NavMenulinks } from "@/lib/constants";
 
 const MobileMenu = () => {
   return (
@@ -15,18 +16,12 @@ const MobileMenu = () => {
       <DropdownMenuTrigger asChild className="md:hidden cursor-pointer">
         <AlignJustify className="text-iconPrimary" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="start" className="font-semibold ">
-        <DropdownMenuItem asChild className="cursor-pointer">
-          <Link href={"/"}>Home</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem className="cursor-pointer">
-          Categories
-        </DropdownMenuItem>
-        <DropdownMenuItem className="cursor-pointer">
-          Latest Deals
-        </DropdownMenuItem>
-        <DropdownMenuItem className="cursor-pointer">Contact</DropdownMenuItem>
-        <DropdownMenuItem className="cursor-pointer">Blog</DropdownMenuItem>
+      <DropdownMenuContent align="end" className="font-semibold ">
+        {NavMenulinks.map((item) => (
+          <DropdownMenuItem asChild className="cursor-pointer" key={item.name}>
+            <Link href={item.url}>{item.name}</Link>
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );
