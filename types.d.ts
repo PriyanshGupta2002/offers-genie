@@ -1,7 +1,10 @@
+import { LucideProps } from "lucide-react";
+
 export interface CategoryCardProps {
   categoryName: string;
-  categoryImage: string;
+  icon: React.ReactNode;
   isActive: boolean;
+  handleTabActive: (tab: Tabs) => void;
 }
 
 export interface footerBannerApiResponse {
@@ -17,4 +20,30 @@ export interface BlogDataType {
 
 export interface BlogListProps {
   blogList: BlogDataType[];
+}
+
+export type Tabs =
+  | "Electronics"
+  | "Fashion"
+  | "Web Hosting"
+  | "Domains"
+  | "Beauty & Makeup";
+
+export interface MobileMenuProps {
+  activeLink: string;
+  setActiveLink: (link: string) => void;
+}
+
+export interface CategoryCarouselProps {
+  activeTab: Tabs;
+  setActiveTab: (tab: Tabs) => void;
+}
+
+export interface TopDealCarouselProps {
+  data: footerBannerApiResponse[];
+}
+
+export interface TrendDealResponseStateProp {
+  company_name: string;
+  offers: footerBannerApiResponse[];
 }

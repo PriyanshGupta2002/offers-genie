@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      aspectRatio: {
+        "30/9": "30 / 9",
+      },
       backgroundImage: {
         "bg-handshake": "url('/handshake.svg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -28,8 +31,14 @@ const config: Config = {
         activeBg: "#057CD9",
         textTertiary: "#737373",
         iconPrimary: "#5F6368",
-        textSecondary: "#2E2E2E",
+        primary100: "#F3EDFA",
+        primary200: "#E6D9F5",
+        primaryPrimary: "#8548B0",
+        neutralsBlack: "#262320",
+        neutralsLightGrey: "#EAE4DF",
+        neutralsDarkGrey: "#827D7A",
         tertiaryBg: "#FFB378",
+        primary800: "#5C3078",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

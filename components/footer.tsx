@@ -1,51 +1,52 @@
 import Image from "next/image";
 import React from "react";
-
-import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { footerSocials } from "@/lib/constants";
+import { footerSocials, NavMenulinks } from "@/lib/constants";
 import Link from "next/link";
-
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500"],
-  subsets: ["latin"],
-});
+import { Separator } from "@radix-ui/react-separator";
 
 const Footer = () => {
   return (
-    <div className="p-4 bg-[#818182]">
-      <footer className="p-5 gap-3 space-y-3 flex items-center flex-col justify-center">
-        <Image src={"/logo.svg"} alt="logo" width={87} height={96} />
+    <div className="md:p-4 p-2  bg-neutralsBlack">
+      <footer className="md:p-5 p-1 gap-3 flex items-start flex-wrap  justify-between">
+        <Image src={"/dark-logo.svg"} alt="logo" width={87} height={96} />
         <div className="flex flex-col gap-1 text-white font-normal">
-          <h1 className="text-center text-xl">Sitemap</h1>
+          <h1 className="text-center text-xl">Explore</h1>
           <div
             className={cn(
-              poppins.className,
-              "flex flex-col text-sm gap-1 items-start  justify-center"
+              "flex flex-col text-xs font-medium gap-2 items-start  justify-center"
             )}
           >
-            <span className="ml-2">Home</span>
-            <span className="ml-2">Category</span>
-            <span className="ml-2">Latest Deals</span>
-            <span className="ml-2">Blog</span>
-            <span className="ml-2">Contact</span>
+            {NavMenulinks.map((item) => (
+              <Link href={item.url} key={item.name}>
+                <span>{item.name}</span>
+              </Link>
+            ))}
           </div>
         </div>
-        <div className="flex items-center gap-3">
-          {footerSocials.map((item, idx) => (
-            <div className="bg-white rounded-full p-3" key={idx}>
-              <Link href={item.url}>
-                <Image
-                  alt={item.url}
-                  width={15}
-                  height={15}
-                  src={item.iconPath}
-                />
-              </Link>
-            </div>
-          ))}
+        <div className="space-y-1 text-xs text-white">
+          <span className="uppercase">Socials</span>
+          <div className="flex items-center gap-3">
+            {footerSocials.map((item, idx) => (
+              <div className="bg-white rounded-full p-3" key={idx}>
+                <Link href={item.url}>
+                  <Image
+                    alt={item.url}
+                    width={15}
+                    height={15}
+                    src={item.iconPath}
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </footer>
+      <div className="flex font-medium items-center gap-2 text-white">
+        <Link href={"/disclaimer"}>Disclaimer</Link>
+        <div className="w-[1px] h-5 bg-white" />
+        <Link href={"/privacy-policy"}>Privacy Policy</Link>
+      </div>
     </div>
   );
 };

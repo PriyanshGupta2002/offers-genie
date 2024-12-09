@@ -1,23 +1,25 @@
+import { Brush, Globe, Server, Shirt, WashingMachine } from "lucide-react";
+
 export const topCategories = [
   {
+    name: "Electronics",
+    Icon: WashingMachine,
+  },
+  {
     name: "Fashion",
-    iconPath: "/fashion.svg",
+    Icon: Shirt,
   },
   {
-    name: "Mobile",
-    iconPath: "/mobile.svg",
+    name: "Web Hosting",
+    Icon: Globe,
   },
   {
-    name: "Medicine",
-    iconPath: "/medicine.svg",
+    name: "Domains",
+    Icon: Server,
   },
   {
-    name: "TV",
-    iconPath: "/tv.svg",
-  },
-  {
-    name: "Food",
-    iconPath: "/food.svg",
+    name: "Beauty & Makeup",
+    Icon: Brush,
   },
 ];
 

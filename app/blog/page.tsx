@@ -10,6 +10,7 @@ const blogPage = async () => {
   }: {
     data: BlogDataType[];
   } = await axios.get(`${envVars.baseUrl}/blogPosts`);
+  console.log(data);
 
   return (
     <>

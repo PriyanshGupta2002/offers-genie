@@ -4,7 +4,7 @@ import ImageCarousel from "./image-carousel";
 
 const BannerCarousel = () => {
   return (
-    <div className="max-w-7xl p-4 m-auto">
+    <div className="max-w-7xl rounded-md overflow-hidden p-4 m-auto">
       <ImageCarousel />
     </div>
   );

@@ -1,29 +1,34 @@
 "use client";
-import React from "react";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuItem,
-  DropdownMenuContent,
-} from "./ui/dropdown-menu";
+import React, { FC } from "react";
 import { AlignJustify } from "lucide-react";
 import Link from "next/link";
 import { NavMenulinks } from "@/lib/constants";
-
-const MobileMenu = () => {
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { MobileMenuProps } from "@/types";
+import { cn } from "@/lib/utils";
+const MobileMenu: FC<MobileMenuProps> = ({ activeLink, setActiveLink }) => {
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild className="md:hidden cursor-pointer">
+    <Sheet>
+      <SheetTrigger asChild className="md:hidden cursor-pointer">
         <AlignJustify className="text-iconPrimary" />
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="font-semibold ">
+      </SheetTrigger>
+      <SheetContent className="space-y-4 py-10">
         {NavMenulinks.map((item) => (
-          <DropdownMenuItem asChild className="cursor-pointer" key={item.name}>
+          <div
+            className={cn(
+              activeLink === item.url
+                ? "text-primaryPrimary"
+                : "text-neutralsBlack",
+              "cursor-pointer"
+            )}
+            key={item.name}
+            onClick={() => setActiveLink(item.url)}
+          >
             <Link href={item.url}>{item.name}</Link>
-          </DropdownMenuItem>
+          </div>
         ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+      </SheetContent>
+    </Sheet>
   );
 };
 
