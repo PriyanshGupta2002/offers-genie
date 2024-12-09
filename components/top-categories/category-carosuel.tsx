@@ -12,9 +12,12 @@ const CategoryCarosuel: FC<CategoryCarouselProps> = ({
   activeTab,
   setActiveTab,
 }) => {
-  const handleTabActive = useCallback((tab: Tabs) => {
-    setActiveTab(tab);
-  }, []);
+  const handleTabActive = useCallback(
+    (tab: Tabs) => {
+      setActiveTab(tab);
+    },
+    [setActiveTab]
+  );
   return (
     <div>
       <div className="hidden lg:flex flex-col gap-2 border-[1.5px]   border-neutralsLightGrey rounded-md ">

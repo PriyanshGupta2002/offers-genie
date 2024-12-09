@@ -8,7 +8,6 @@ const RedirectPage = () => {
   const router = useRouter();
 
   const searchParams = useSearchParams();
-  console.log(searchParams.get("link"));
 
   useEffect(() => {
     // Generate a random delay between 1.5 and 2.5 seconds
