@@ -3,7 +3,6 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { footerSocials, NavMenulinks } from "@/lib/constants";
 import Link from "next/link";
-import { Separator } from "@radix-ui/react-separator";
 
 const Footer = () => {
   return (

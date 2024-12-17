@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState<string>("/");
   return (
-    <header className="top-0 sticky z-20 bg-white">
+    <header className="top-0 sticky z-30 bg-white">
       <nav className=" shadow-sm p-2">
         <div className="max-w-6xl m-auto flex items-center justify-between md:justify-normal space-x-60 px-2">
           <Link href={"/"}>

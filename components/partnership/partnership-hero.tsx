@@ -10,7 +10,7 @@ const ParternshipHero = () => {
           src={"/handshake.svg"}
           width={700}
           height={700}
-          className="absolute -translate-x-1/2 left-1/2 -translate-y-1/2 top-1/2 z-0 opacity-45"
+          className="absolute  -translate-x-1/2 left-1/2 -translate-y-1/2 top-1/2 z-0 opacity-45"
           alt="handshake"
         />
 
