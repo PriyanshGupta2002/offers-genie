@@ -25,7 +25,11 @@ const ImageCarousel = () => {
     setIsLoading(true);
     try {
       if (ip) {
-        const { data } = await axios.get(`${envVars.baseUrl}/home/mainBanner`);
+        const { data } = await axios.get(`${envVars.baseUrl}/home/mainBanner`, {
+          headers: {
+            ip,
+          },
+        });
         setMain(data);
       }
     } catch (error) {
