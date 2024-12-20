@@ -49,8 +49,6 @@ const TopCategories = () => {
     return <Skeleton className="w-full h-[30px]" />;
   }
 
-  console.log(dealCarouselData);
-
   return (
     <div className="max-w-7xl m-auto p-4 space-y-3">
       <h1 className="text-base text-neutralsBlack font-medium">
